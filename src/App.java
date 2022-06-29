@@ -6,33 +6,23 @@ import javax.swing.JOptionPane;
 public class App {
     public static void main(String[] args) throws Exception {
         
-        // 13. Programa que pase de pesos a dólares y viceversa.
-        // 14. Mostrar los N primeros términos de la serie de Fibonacci.
-        // 15. Leer un número N y calcular la suma de los factoriales de los números desde 0 hasta N.
-        // 16. Programa que muestre en líneas separadas lo siguiente:
-        // ZYWXVUTSRQPONMLKJIHGFEDCBAYWXVUTSRQPONMLKJIHGFEDCBAWXVUTSRQPONMLKJIHGFEDCBA....DCBACBABAA
-        // 17. Mostrar un contador de 5 dígitos. En lugar del dígito 3 se debe mostrar E.
+ 
 
-        float sueldo = Float.parseFloat(JOptionPane.showInputDialog(null, "Por favor digite el sueldo"));
+        // float sueldo = Float.parseFloat(JOptionPane.showInputDialog(null, "Por favor digite el sueldo"));
         
         
-        float gasto1 = Float.parseFloat(JOptionPane.showInputDialog(null, "Por favor digite el gasto 1"));
-        sueldo -= gasto1;
-        JOptionPane.showMessageDialog(null, "El saldo actual es " + sueldo);
+        // float gasto1 = Float.parseFloat(JOptionPane.showInputDialog(null, "Por favor digite el gasto 1"));
+        // sueldo -= gasto1;
+        // JOptionPane.showMessageDialog(null, "El saldo actual es " + sueldo);
         
-        float gasto2 = Float.parseFloat(JOptionPane.showInputDialog(null, "Por favor digite el gasto 2"));
-        sueldo -= gasto2;
-        JOptionPane.showMessageDialog(null, "El saldo actual es " + sueldo);
+        // float gasto2 = Float.parseFloat(JOptionPane.showInputDialog(null, "Por favor digite el gasto 2"));
+        // sueldo -= gasto2;
+        // JOptionPane.showMessageDialog(null, "El saldo actual es " + sueldo);
         
-        float gasto3 = Float.parseFloat(JOptionPane.showInputDialog(null, "Por favor digite el gasto 3"));
-        sueldo -= gasto3;
-        JOptionPane.showMessageDialog(null, "El saldo actual es " + sueldo);
+        // float gasto3 = Float.parseFloat(JOptionPane.showInputDialog(null, "Por favor digite el gasto 3"));
+        // sueldo -= gasto3;
+        // JOptionPane.showMessageDialog(null, "El saldo actual es " + sueldo);
         
-        
-        
-
-
-
 
 
 
@@ -190,6 +180,19 @@ public class App {
         // se = sc.nextInt();  
         // Doce(se);
         // sc.close();
+
+
+
+        
+        // 14. Mostrar los N primeros términos de la serie de Fibonacci.
+        // 15. Leer un número N y calcular la suma de los factoriales de los números desde 0 hasta N.
+        // 16. Programa que muestre en líneas separadas lo siguiente:
+        // ZYWXVUTSRQPONMLKJIHGFEDCBAYWXVUTSRQPONMLKJIHGFEDCBAWXVUTSRQPONMLKJIHGFEDCBA....DCBACBABAA
+        // 17. Mostrar un contador de 5 dígitos. En lugar del dígito 3 se debe mostrar E.
+
+
+        //Datos para el punto Trece
+        // 13. Programa que pase de pesos a dólares y viceversa.
 
 
     }
