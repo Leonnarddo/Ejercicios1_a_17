@@ -1,6 +1,7 @@
 import java.util.Scanner;
 /*&&	 And lógico (y)	 ||	 Or lógico (o)*/
 
+import javax.lang.model.util.ElementScanner6;
 import javax.swing.JOptionPane;
 
 public class App {
@@ -193,9 +194,43 @@ public class App {
 
         //Datos para el punto Trece
         // 13. Programa que pase de pesos a dólares y viceversa.
-
-
+        double canti;
+        int divisa;  
+        String moneda;
+        Scanner cambio = new Scanner(System.in);
+        
+        System.out.print("\033[H\033[2J");  
+        System.out.flush();   
+        System.out.println(" ----------------------");
+        System.out.println("| Conversión de divisa |");
+        System.out.println(" ----------------------");       
+        System.out.println("Deseas cambiar de \n1 Dólares a pesos o \n2 Pesos a dólares");
+        divisa = cambio.nextInt();
+        if (divisa==1){
+            moneda = "dólares";
+            System.out.print("Cuantos dólares deseas convertir a pesos? " );
+            canti = cambio.nextDouble();
+            cambio.close();
+            System.out.print(canti + " " + moneda + " son " + conver(moneda,canti) + " pesos");
+        }else if (divisa==2){
+            moneda = "pesos";
+            System.out.print("Cuantos pesos deseas convertir a dólares? " );
+            canti = cambio.nextDouble();
+            cambio.close();
+            System.out.print(canti + " " + moneda + " son " + conver(moneda,canti) + " dólares");
+        }else 
+            System.out.println("Selección incorrecta");
     }
+
+    public static double conver(String moneda, double canti){
+        double saldo;
+        if (moneda=="dólares")
+            saldo = canti*4112.75;
+        else
+            saldo = canti*0.00024;
+        return saldo;
+    }
+
     // public static void Uno(int dia, int mes, int a){
     //     int ns, valor, e1, e2, e3, e4;                                          
     //     valor = dia + mes + a;//12+7+1980 = 1999
@@ -223,12 +258,12 @@ public class App {
     //     System.out.println("Número modificado " + N);
     // }
     
-    public static void Cuatro(double v)
-    {
-        // 0.2777 es la relacion entre 1000 dividido 36000
-        double vms=v*0.27777;
-        System.out.println(v + " Km/h -> " + (double)(vms) + " m/s");   // Por que el (double)?
-    }
+    // public static void Cuatro(double v)
+    // {
+    //     // 0.2777 es la relacion entre 1000 dividido 36000
+    //     double vms=v*0.27777;
+    //     System.out.println(v + " Km/h -> " + (double)(vms) + " m/s");   // Por que el (double)?
+    // }
     
     // public static void Cinco(double c1, double c2){
     //     double h=Math.sqrt(Math.pow(c1,2)+ Math.pow(c2, 2));
@@ -243,16 +278,16 @@ public class App {
     //        System.out.println("No es múltiplo de 10");
     // }
 
-    public static void Siete(char c){
-        //método isUpperCase de la clase Character determina 
-        //si el carácter especificado es un carácter en mayúsculas .
-        if (Character.isUpperCase(c))         
-        {
-            System.out.println(c + " Es una letra mayúscula");
-        } else {
-            System.out.println(c + " No es una letra mayúscula");
-        }
-    }
+    // public static void Siete(char c){
+    //     //método isUpperCase de la clase Character determina 
+    //     //si el carácter especificado es un carácter en mayúsculas .
+    //     if (Character.isUpperCase(c))         
+    //     {
+    //         System.out.println(c + " Es una letra mayúscula");
+    //     } else {
+    //         System.out.println(c + " No es una letra mayúscula");
+    //     }
+    // }
 
     // public static void Ocho(double di, double ds){
     //     if(ds==0){
