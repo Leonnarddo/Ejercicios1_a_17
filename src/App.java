@@ -1,11 +1,11 @@
 import java.util.Scanner;
 /*&&	 And lógico (y)	 ||	 Or lógico (o)*/
 
-import javax.lang.model.util.ElementScanner6;
-import javax.swing.JOptionPane;
+// import javax.lang.model.util.ElementScanner6;
+// import javax.swing.JOptionPane;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         
  
 
@@ -185,10 +185,16 @@ public class App {
 
 
         
-        // 14. Mostrar los N primeros términos de la serie de Fibonacci.
-        // 15. Leer un número N y calcular la suma de los factoriales de los números desde 0 hasta N.
+         // 15. Leer un número N y calcular la suma de los factoriales de los números desde 0 hasta N.
         // 16. Programa que muestre en líneas separadas lo siguiente:
-        // ZYWXVUTSRQPONMLKJIHGFEDCBAYWXVUTSRQPONMLKJIHGFEDCBAWXVUTSRQPONMLKJIHGFEDCBA....DCBACBABAA
+        // ZYWXVUTSRQPONMLKJIHGFEDCBA
+        // YWXVUTSRQPONMLKJIHGFEDCBA
+        // WXVUTSRQPONMLKJIHGFEDCBA
+        // ....
+        // DCBA
+        // CBA
+        // BA
+        // A
         // 17. Mostrar un contador de 5 dígitos. En lugar del dígito 3 se debe mostrar E.
 
 
@@ -220,7 +226,38 @@ public class App {
             System.out.print(canti + " " + moneda + " son " + conver(moneda,canti) + " dólares");
         }else 
             System.out.println("Selección incorrecta");
+    
+
+        //Datos para el punto Catorce
+        // 14. Mostrar los N primeros términos de la serie de Fibonacci.
+
+        int numer;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("\033[H\033[2J");  
+        System.out.flush();   
+        System.out.println(" ------------------------");
+        System.out.println("| Serie fibonaci hasta X |");
+        System.out.println(" ------------------------");   
+        System.out.print("Introduzca un numero: ");
+        numer = sc.nextInt();
+        sc.close();
+        fibon(numer);
+
     }
+
+    public static void fibon(int numa){
+    int fib1=0;
+    int fib2=1;
+    int temp;
+    System.out.println("Serie fibonaci hasta " + numa);
+    do{
+        System.out.print(fib1 + ", ");
+        temp=fib2;
+        fib2=fib1+fib2;
+        fib1=temp;
+    }while(fib1<=numa);
+    }
+
 
     public static double conver(String moneda, double canti){
         double saldo;
@@ -229,8 +266,7 @@ public class App {
         else
             saldo = canti*0.00024;
         return saldo;
-    }
-
+        }
     // public static void Uno(int dia, int mes, int a){
     //     int ns, valor, e1, e2, e3, e4;                                          
     //     valor = dia + mes + a;//12+7+1980 = 1999
